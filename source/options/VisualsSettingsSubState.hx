@@ -141,7 +141,7 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 			"What song do you prefer for the Pause Screen?",
 			'pauseMusic',
 			STRING,
-			['None', 'Tea Time', 'Breakfast', 'Breakfast (Pico)']);
+			['None', 'Tea Time', 'Breakfast', 'Breakfast (Pico)', 'EXPERIMENTAL(By Playable Character)']);
 		addOption(option);
 		option.onChange = onChangePauseMusic;
 		
@@ -207,7 +207,7 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 	var changedMusic:Bool = false;
 	function onChangePauseMusic()
 	{
-		if(ClientPrefs.data.pauseMusic == 'None')
+		if(ClientPrefs.data.pauseMusic == 'None' || ClientPrefs.data.pauseMusic == 'EXP(By Playable Character)')
 			FlxG.sound.music.volume = 0;
 		else
 			FlxG.sound.playMusic(Paths.music(Paths.formatToSongPath(ClientPrefs.data.pauseMusic)));

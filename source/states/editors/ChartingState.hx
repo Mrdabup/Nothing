@@ -3780,7 +3780,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 						charterInput.onChange = function(old:String, cur:String) pack.metadata.charter = cur;
 
 						var diffs:Array<String> = pack.metadata.playData.difficulties;
-						if(diffs == null || diffs.length < 0) pack.metadata.playData.difficulties = diffs = ['easy', 'normal', 'hard'];
+						if(diffs == null || diffs.length < 0) pack.metadata.playData.difficulties = diffs = ['easy', 'normal', 'hard', 'erect', 'nightmare'];
 						difficultiesInput = new PsychUIInputText(textX, textY + 42, 160, diffs.join(', '), 8);
 						difficultiesInput.cameras = state.cameras;
 						difficultiesInput.forceCase = LOWER_CASE;

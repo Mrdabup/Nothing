@@ -165,7 +165,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		super.update(elapsed);
 
-		if(controls.BACK)
+		if(controls.BACK || controls.PAUSE) //There's two options, or you suck at reaching keys or you are lazy af -TOJG
 		{
 			close();
 			return;

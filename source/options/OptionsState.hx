@@ -11,7 +11,8 @@ class OptionsState extends MusicBeatState
 		'Adjust Delay and Combo',
 		'Graphics',
 		'Visuals',
-		'Gameplay'
+		'Gameplay',
+		'Experimental'
 		#if TRANSLATIONS_ALLOWED , 'Language' #end
 	];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -36,6 +37,8 @@ class OptionsState extends MusicBeatState
 				MusicBeatState.switchState(new options.NoteOffsetState());
 			case 'Language':
 				openSubState(new options.LanguageSubState());
+			case 'Experimental':
+				openSubState(new options.ExperimentalOptionsSubState());	
 		}
 	}
 
