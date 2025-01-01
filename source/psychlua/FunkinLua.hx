@@ -182,7 +182,8 @@ class FunkinLua {
 
 		// Other settings
 		set('downscroll', ClientPrefs.data.downScroll);
-		set('middlescroll', ClientPrefs.data.middleScroll);
+		set('middlescroll', ClientPrefs.data.middleScroll); 
+		set('disSomeIcons', ClientPrefs.data.disSomeIcons);
 		set('framerate', ClientPrefs.data.framerate);
 		set('ghostTapping', ClientPrefs.data.ghostTapping);
 		set('hideHud', ClientPrefs.data.hideHud);

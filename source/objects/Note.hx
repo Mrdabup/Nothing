@@ -140,7 +140,7 @@ class Note extends FlxSprite
 			return ClientPrefs.data.hitsoundVolume;
 		return hitsoundForce ? hitsoundVolume : 0.0;
 	}
-	public var hitsound:String = 'hitsound';
+	public var hitsound:String = ClientPrefs.data.hitsoundSfx;
 
 	private function set_multSpeed(value:Float):Float {
 		resizeByRatio(value / multSpeed);
@@ -221,7 +221,7 @@ class Note extends FlxSprite
 					gfNote = true;
 			}
 			if (value != null && value.length > 1) NoteTypesConfig.applyNoteTypeData(this, value);
-			if (hitsound != 'hitsound' && hitsoundVolume > 0) Paths.sound(hitsound); //precache new sound for being idiot-proof
+			if (hitsound != ClientPrefs.data.hitsoundSfx && hitsoundVolume > 0) Paths.sound(ClientPrefs.data.hitsoundSfx); //precache new sound for being idiot-proof
 			noteType = value;
 		}
 		return value;
